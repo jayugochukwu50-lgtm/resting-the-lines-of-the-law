@@ -1,0 +1,593 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f8f6f1;
+    color: #242424;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    background: #f8f6f1;
+    border-bottom: 1px solid #ddd8ce;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+}
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #1d2a35;
+    color: #f8f6f1;
+
+    font-family: Georgia, serif;
+    font-size: 22px;
+
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-size: 17px;
+    line-height: 1.15;
+    letter-spacing: 0.2px;
+}
+
+.logo-text small {
+    font-size: 13px;
+    font-weight: 400;
+    color: #756f65;
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navigation a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #514d47;
+    transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+    color: #9b6b36;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(248, 246, 241, 0.98) 0%,
+            rgba(248, 246, 241, 0.92) 55%,
+            rgba(248, 246, 241, 0.55) 100%
+        );
+
+    border-bottom: 1px solid #ddd8ce;
+}
+
+.hero-content {
+    padding: 100px 0;
+    max-width: 850px;
+}
+
+.hero-label,
+.section-label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: #9b6b36;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(52px, 8vw, 92px);
+    line-height: 0.98;
+    font-weight: 400;
+    letter-spacing: -3px;
+    color: #1d2a35;
+    margin-bottom: 22px;
+}
+
+.hero-subtitle {
+    max-width: 700px;
+    font-size: clamp(22px, 3vw, 32px);
+    line-height: 1.25;
+    color: #625a51;
+    margin-bottom: 28px;
+}
+
+.hero-description {
+    max-width: 680px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #625f59;
+    margin-bottom: 36px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-button,
+.secondary-button,
+.read-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 12px 25px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.primary-button {
+    background: #1d2a35;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #9b6b36;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    border: 1px solid #bcb5aa;
+    color: #38352f;
+}
+
+.secondary-button:hover {
+    border-color: #1d2a35;
+    background: #1d2a35;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   BOOK SECTION
+========================================= */
+
+.book-section {
+    padding: 120px 0;
+    background: #ffffff;
+}
+
+.section-heading {
+    margin-bottom: 65px;
+}
+
+.section-heading h2 {
+    font-size: clamp(38px, 5vw, 60px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #1d2a35;
+}
+
+.section-intro {
+    margin-top: 10px;
+    font-size: 21px;
+    color: #756f65;
+}
+
+.book-layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 85px;
+    align-items: center;
+}
+
+
+/* Book Cover */
+
+.book-cover-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.book-cover {
+    width: 100%;
+    max-width: 360px;
+
+    background: #eeeeee;
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.16),
+        0 8px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+.book-cover:hover {
+    transform: translateY(-7px);
+}
+
+.book-cover img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Book Information */
+
+.book-details {
+    max-width: 650px;
+}
+
+.book-kicker {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #9b6b36;
+    margin-bottom: 16px;
+}
+
+.book-details h3 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 400;
+    color: #1d2a35;
+    margin-bottom: 18px;
+}
+
+.author {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5e5a54;
+    margin-bottom: 28px;
+}
+
+.book-details > p:not(.book-kicker):not(.author) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #5d5a55;
+    margin-bottom: 20px;
+}
+
+.book-action {
+    margin-top: 32px;
+}
+
+.read-button {
+    background: #9b6b36;
+    color: #ffffff;
+}
+
+.read-button:hover {
+    background: #1d2a35;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   AUTHOR SECTION
+========================================= */
+
+.author-section {
+    padding: 110px 0;
+    background: #1d2a35;
+    color: #ffffff;
+}
+
+.author-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.author-section .section-label {
+    color: #c49a67;
+}
+
+.author-heading h2 {
+    font-size: clamp(42px, 6vw, 70px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.author-description {
+    padding-top: 35px;
+}
+
+.author-description p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d7d5d0;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   READING SECTION
+========================================= */
+
+.reading-section {
+    padding: 120px 0;
+    text-align: center;
+    background: #f1eee7;
+}
+
+.reading-content {
+    max-width: 720px;
+}
+
+.reading-content h2 {
+    font-size: clamp(40px, 6vw, 65px);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #1d2a35;
+    margin-bottom: 20px;
+}
+
+.reading-content > p:not(.section-label) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #625f59;
+    margin-bottom: 32px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: #151f27;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-brand h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.footer-brand p,
+.footer-author p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #aaa8a2;
+}
+
+.footer-author {
+    text-align: right;
+}
+
+.copyright {
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .nav-container {
+        min-height: 72px;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .logo-text {
+        font-size: 14px;
+    }
+
+    .logo-mark {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+
+    .book-section {
+        padding: 80px 0;
+    }
+
+    .book-layout {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .book-cover-wrapper {
+        justify-content: flex-start;
+    }
+
+
+    .author-section {
+        padding: 80px 0;
+    }
+
+    .author-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .author-description {
+        padding-top: 10px;
+    }
+
+
+    .reading-section {
+        padding: 80px 0;
+    }
+
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-author {
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 500px) {
+
+    .navigation {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navigation a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navigation a:hover {
+    opacity: 0.65;
+    transform: translateY(-1px);
+}
